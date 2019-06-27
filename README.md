@@ -11,7 +11,7 @@ The usual `npm install` applies here.
 
 ### Exercise -- Converting Page Objects to Functions
 * [Base Page Objects](/exercises/exercise-1)
-* [Example Solution](//exercises/exercise-1-solution)
+* [Example Solution](/exercises/exercise-1-solution)
 
 ## References
 * [Fun Fun Function](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
