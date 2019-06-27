@@ -1,59 +1,34 @@
-# Inheritance
+# Higher Order Functions
 
-Imagine we have a game that need a Dog Class:
+Fulfills one (or more) of the two following requirements: 
+* Takes a function as an argument
+* Returns a new function
 
-```
-Dog
-  .bark()
-  .poop()
-```
+> Small Composable Things That Fit Together
 
-And all things need cats, so we add a Cat Class. 
-```
-Cat
-  .meow()
-  .poop()
-```
-But they both need to `poop` and we can't have duplication, so we create an 
-Animal super-class.
+## A simple Example
 
 ```
-Animal
-  .poop()
-  Cat
-    .meow()
-  Dog 
-    .bark()
+Array.prototype.filter
+
+const animals = [
+  { species: 'dog', name: 'James' },
+  { species: 'dog', name: 'Izu' },
+  { species: 'cat', name: 'Ophelia' },
+  { species: 'guinea pig', name: 'Princess Pow' } 
+];
+
+const dogs = animals.filter(a => {
+  return a.species === 'dog'
+});
 ```
 
-With all this pooping, barking and meowing, we need a robot to clean up the 
-dogs and cats. 
+You can even make the callback take a function: 
 
 ```
-Robot
-  .drive()
-  CleaningRobot
-    .clean()
-  MurderRobot
-    .kill()
+const isDog = (animal) => {
+  return animal.species === 'dog';
+};
+
+const dogs = animals.filter(isDog);
 ```
-
-But what happens when the product manager wants a MurderRobotDog?
-
-It needs to `drive`, `bark` and `kill`.
-
-## It's a bit of the Gorilla Banana Problem
-You request a banana but get a Gorilla holding a banana.
-
-## Composition
-Composition to the rescue. Instead of describing each Object, we describe what it does.
-
-```
-dog = pooper + barker
-cat = pooper + meower
-cleaningRobot = driver + cleaner
-murderRobot = driver + killer
-murderRobotDog = driver + killer + barker
-```
-
-

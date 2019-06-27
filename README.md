@@ -9,7 +9,7 @@ The usual `npm install` applies here.
 * [Inheritance and Composibility](/lessons/lesson-2)
 * [Pure Functions and Immutibility](/lessons/lesson-3)
 
-### Exercise -- Converting Page Objects to Functions
+### Exercise – Converting Page Objects to Functions
 * [Base Page Objects](/exercises/exercise-1)
 * [Example Solution](/exercises/exercise-1-solution)
 
