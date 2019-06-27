@@ -4,6 +4,8 @@ Fulfills one (or more) of the two following requirements:
 * Takes a function as an argument
 * Returns a new function
 
+> Small Composable Things That Fit Together
+
 ## A simple Example
 
 ```
