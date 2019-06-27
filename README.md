@@ -10,8 +10,8 @@ The usual `npm install` applies here.
 * [Pure Functions and Immutibility](/lessons/lesson-3)
 
 ### Exercise -- Converting Page Objects to Functions
-* [Base Page Objects](/exercises/exercises-1)
-* [Example Solution](//exercises/exercises-1-solution)
+* [Base Page Objects](/exercises/exercise-1)
+* [Example Solution](//exercises/exercise-1-solution)
 
 ## References
 * [Fun Fun Function](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
