@@ -7,7 +7,7 @@ const SELECTORS = {
   SEARCH_CONTAINER: '#search',
   SEARCH_RESULT: '#search .g',
   RESULT_TITLE: '.LC20lb',
-  RESULT_LINK: '.r a',
+  RESULT_LINK: '.r a'
 };
 
 interface SearchResult {
@@ -15,7 +15,10 @@ interface SearchResult {
   url: string;
 }
 
-export const searchByTerm = async (page: Page, query: string): Promise<void> => {
+export const searchByTerm = async (
+  page: Page,
+  query: string
+): Promise<void> => {
   await page.type(SELECTORS.SEARCH_FIELD, query);
   await blurElement(page, SELECTORS.SEARCH_FIELD);
   await page.waitFor(SELECTORS.SEARCH_BTN);
@@ -25,17 +28,17 @@ export const searchByTerm = async (page: Page, query: string): Promise<void> => 
 export const getSearchResults = async (page: Page): Promise<SearchResult[]> => {
   const { SEARCH_RESULT } = SELECTORS;
 
-  await page.waitFor(2000);
+  await page.waitFor(1000);
 
-  return await page.$$eval(SEARCH_RESULT, elements => {
+  return await page.$$eval(SEARCH_RESULT, (elements, selectors) => {
     return elements.map(el => {
-      const title: HTMLElement = el.querySelector('.LC20lb');
-      const link: HTMLAnchorElement = el.querySelector('.r a');
+      const title: HTMLElement = el.querySelector(selectors.RESULT_TITLE);
+      const link: HTMLAnchorElement = el.querySelector(selectors.RESULT_LINK);
 
       return {
         title: title.textContent,
         url: link.href
-      }
+      };
     });
-  });
+  }, SELECTORS);
 };

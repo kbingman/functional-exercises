@@ -56,4 +56,4 @@ murderRobot = driver + killer
 murderRobotDog = driver + killer + barker
 ```
 
-Shameless stolen from [Fun Fun Function](https://egghead.io/courses/just-enough-functional-programming-in-javascript)
+Shamelessly stolen from [Fun Fun Function](https://www.youtube.com/watch?v=wfMtDGfHWpA)
